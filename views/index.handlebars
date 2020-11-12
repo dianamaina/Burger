@@ -1,0 +1,48 @@
+<main class="container mt-5 text-center">
+
+    {{!-- Main Header --}}
+    <h1 class="display-3">Eat-da-Burger!</h1>
+
+    {{!-- Main Image --}}
+    <img src="https://ih1.redbubble.net/image.894871460.7630/st,small,845x845-pad,1000x1000,f8f8f8.jpg" alt="Winky Burger Image"/>
+
+    <div class="container mt-4">
+        <div class="row">
+            {{!-- Burgers to Eat Section--}}
+            <div class="col-sm-6">
+                <h2>Burgers To Eat</h2>
+                <ul class="p-0">
+                    {{#each burgers}}
+                    {{#unless devoured}} {{!-- If not devoured --}}
+                    {{>burger-block devoured=false}}
+                    {{/unless}}
+                    {{/each}}
+                </ul>
+            </div>
+            {{!-- Devoured Burgers Section--}}
+            <div class="col-sm-6">
+                <h2>Devoured Burgers</h2>
+                <ul class="p-0">
+                    {{#each burgers}}
+                    {{#if devoured}}
+                    {{>burger-block devoured=true}}
+                    {{/if}}
+                    {{/each}}
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    {{!-- Add a Burger Section --}}  
+    <h3>Add a Burger!</h3>
+
+    <form class="create form-inline justify-content-center">
+        <div class="form-group">
+            <input type="text" id="newBurger" name="name" placeholder="Burger Name" class="ml-2">
+        </div>
+        <button type="submit" class="btn btn-primary btn-sm ml-2">Add a Burger</button>
+    </form>
+
+</main>
