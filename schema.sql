@@ -15,14 +15,14 @@ CREATE TABLE burgers (
 );
 
 -- Inserted a set of records into the table
-INSERT INTO schools (name)
+INSERT INTO burgers (name)
 VALUES ("Hogwarts School of Witchcraft");
 
-INSERT INTO schools (name)
+INSERT INTO burgers (name)
 VALUES ("Castelobruxo");
 
-INSERT INTO schools (name)
+INSERT INTO burgers (name)
 VALUES ("Durmstrang Institute");
 
-INSERT INTO schools (name)
+INSERT INTO burgers (name)
 VALUES ("Beauxbatons Academy of Magic");
